@@ -1,16 +1,35 @@
-# fym
 
-A new Flutter project.
+# FuckYourMoney - Présentation
 
-## Getting Started
+_FuckYourMoney_ est une application créer avec Dart, flutter et firebase pour la plateforme android vous permettant de gérer vos finances personnelles en toute simplicité. L'application tente d'être la plus design possible afin de permettre la meilleure expérience utilisateur possible.
 
-This project is a starting point for a Flutter application.
+# Installation et configuration
 
-A few resources to get you started if this is your first Flutter project:
+Pour configurer l'application, vous devrez créer un projet, puis ajouter une application pour android en cliquant sur _ajouter une application_ dans votre projet firebase.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Ensuite, vous devez créer 3 collections dans firestore:
+- La collection _Depenses_ ainsi que les colonne depense(number), categorie(string) et date(string) devrons être initialisés.
+- La collection _Balance_ ainsi que la colonne balance(number) devra être initialisé à 0.
+- La collection _Recus_ ainsi que la colonne recu(number) devra aussi être initialisé à 0
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Vous devrez aussi télécharger votre fichier **google-services.json** contenant les clés API avant de créer votre base de donnée.
+Il sera à placer dans le répertoire `android/app/` du projet.
+
+Maintenant, vous pouvez construire l'apk via la commande suivante:
+```shell
+flutter build apk
+```
+
+ou si vous souhaitez juste tester l'application via un émulateur:
+Démarrez l'émulateur via la commande suivante:
+```shell
+emulator -avd <AVDName> -netspeed full
+```
+
+Lancer l'application via la commande suivante:
+```shell
+flutter run
+```
+
+
+Starrez et partager.
